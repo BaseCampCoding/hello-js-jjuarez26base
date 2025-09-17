@@ -8,12 +8,11 @@ let workdays = Math.floor(budget / dayRate);
 console.log(workdays);
 
 let billable = 22;
-let monthlyDiscount = 0.8;
+let monthlyDiscount = (billable * dayRate) * 0.2;
 let fullMonths = Math.floor(35 / billable);
-console.log(fullMonths)
+console.log(fullMonths);
 let remainingDays = 35 - billable;
-let discountedMonthlyRate = billable * dayRate * monthlyDiscount;
-console.log(discountedMonthlyRate)
+let discountedMonthlyRate = billable * dayRate - monthlyDiscount;
 let remainingCost = remainingDays * dayRate;
 let totalProjectCost = Math.round(discountedMonthlyRate + remainingCost);
-console.log(totalProjectCost)
+console.log(totalProjectCost);
