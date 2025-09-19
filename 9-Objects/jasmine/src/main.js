@@ -16,7 +16,7 @@ console.log(scoreBoard);
 
 let playerNameToUpdate = "New Player";
 let scoreToAdd = 1000;
-scoreBoard[playerNameToUpdate] = scoreToAdd;
+scoreBoard[playerNameToUpdate] += scoreToAdd;
 console.log(scoreBoard);
 
 let mondayBonus = 100;
